@@ -13,14 +13,15 @@ public class BrandServiceImpl implements BrandService {
 	@Autowired
 	private BrandRepository brandRepository;
 
+	private static final String NEW_BRAND_ADDED = "New Brand Added Succesfully !";
+
 	@Override
 	public String addNewBrand(Brand brand) {
 		if (brand.getBrandName().isEmpty() || brand.getBrandName().isBlank()) {
 			throw new UserInputException();
 		}
 		brandRepository.save(brand);
-		String response = "New Brand Added Succesfully !";
-		return response;
+		return NEW_BRAND_ADDED;
 	}
 
 }
