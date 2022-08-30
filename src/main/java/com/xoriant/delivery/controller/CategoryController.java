@@ -17,6 +17,8 @@ import com.xoriant.delivery.service.CategoryService;
 @RestController
 @RequestMapping("/api/categories")
 public class CategoryController {
+	
+	//we have all category related rest api here
 
 	@Autowired
 	private CategoryService categoryService;
