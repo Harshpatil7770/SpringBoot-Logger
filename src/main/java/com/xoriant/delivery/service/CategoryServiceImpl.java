@@ -16,6 +16,8 @@ public class CategoryServiceImpl implements CategoryService {
 	@Autowired
 	private CategoryRepository categoryRepository;
 
+	private static final String NEW_CATEGORY_ADDED = "New Category Added Succesfully !";
+
 	@Override
 	public String addNewCategory(Category category) {
 		if (category.getCategoryName().isBlank() || category.getCategoryName().isBlank()) {
@@ -23,8 +25,7 @@ public class CategoryServiceImpl implements CategoryService {
 		}
 		categoryRepository.save(category);
 		log.info("addNewCategory() called");
-		String response = "New Category Added Succesfully !";
 
-		return response;
+		return NEW_CATEGORY_ADDED;
 	}
 }
