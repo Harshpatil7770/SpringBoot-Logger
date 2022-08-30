@@ -1,5 +1,7 @@
 package com.xoriant.delivery.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,4 +30,12 @@ public class CategoryServiceImpl implements CategoryService {
 
 		return NEW_CATEGORY_ADDED;
 	}
+
+	@Override
+	public List<Category> fetchAllCategories() {
+		
+		return categoryRepository.findAll();
+	}
+	
+	
 }
