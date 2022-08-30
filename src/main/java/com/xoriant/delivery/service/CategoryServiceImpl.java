@@ -1,5 +1,7 @@
 package com.xoriant.delivery.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,8 @@ public class CategoryServiceImpl implements CategoryService {
 	@Autowired
 	private CategoryRepository categoryRepository;
 
+	private static final String NEW_CATEGORY_ADDED = "New Category Added Succesfully !";
+
 	@Override
 	public String addNewCategory(Category category) {
 		if (category.getCategoryName().isBlank() || category.getCategoryName().isBlank()) {
@@ -23,8 +27,15 @@ public class CategoryServiceImpl implements CategoryService {
 		}
 		categoryRepository.save(category);
 		log.info("addNewCategory() called");
-		String response = "New Category Added Succesfully !";
 
-		return response;
+		return NEW_CATEGORY_ADDED;
 	}
+
+	@Override
+	public List<Category> fetchAllCategories() {
+		
+		return categoryRepository.findAll();
+	}
+	
+	
 }
