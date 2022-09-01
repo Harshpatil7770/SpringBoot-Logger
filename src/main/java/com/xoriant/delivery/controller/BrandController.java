@@ -20,7 +20,9 @@ import com.xoriant.delivery.service.BrandService;
 @RequestMapping("/api/brands")
 public class BrandController {
 	
-	//Brand controller class we have all controller method 
+	/*
+	*Brand controller rest api methods.
+	*/
 
 	@Autowired
 	private BrandService brandService;
