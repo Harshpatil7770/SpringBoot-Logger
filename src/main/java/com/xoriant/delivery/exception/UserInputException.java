@@ -15,8 +15,8 @@ public class UserInputException extends RuntimeException {
 	* 
 	*/
 	/*
-	 * custom exception handeler class- to catch and provide specific treatment to
-	 * existing java exception
+	 * custom exception handeler class To catch and provide specific treatment to
+	 * existing java exception.
 	 */
 	private static final long serialVersionUID = 1L;
 

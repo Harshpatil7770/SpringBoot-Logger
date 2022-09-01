@@ -9,6 +9,9 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class GlobalExceptionHandeler extends ResponseEntityExceptionHandler {
 
+	/*
+	 * Handle exception globally
+	 */
 	@ExceptionHandler(UserInputException.class)
 	public ResponseEntity<String> userInputException(UserInputException exception) {
 		return new ResponseEntity<String>("Please check Input Fileds !", HttpStatus.BAD_REQUEST);
