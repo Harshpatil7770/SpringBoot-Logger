@@ -20,6 +20,10 @@ import com.xoriant.delivery.service.CategoryService;
 @RequestMapping("/api/categories")
 public class CategoryController {
 
+	/*
+	 * Category service rest api methods
+	 */
+
 	@Autowired
 	private CategoryService categoryService;
 
