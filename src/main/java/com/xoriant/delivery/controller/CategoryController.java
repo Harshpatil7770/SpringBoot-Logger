@@ -22,6 +22,10 @@ public class CategoryController {
 	
 	//we have all category related rest api here
 
+	/*
+	 * Category service rest api methods
+	 */
+
 	@Autowired
 	private CategoryService categoryService;
 
